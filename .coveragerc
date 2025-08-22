@@ -1,0 +1,6 @@
+[report]
+exclude_lines =
+    # Exclude import statements
+    ^import
+    ^from
+    ^@
