@@ -22,5 +22,5 @@
 4. I believe `pytest.ini` and `.coveragerc` can be reconciled into a single `pyproject.toml`, but leaving separate here on purpose
 
 ### Usage
-1. Import to Databricks workspace
+1. Clone to Databricks workspace
 2. Run `Test Runner` notebook
