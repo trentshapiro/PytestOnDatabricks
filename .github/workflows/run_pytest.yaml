@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  deploy:
+  run-pytest:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v4
