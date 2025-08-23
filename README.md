@@ -21,6 +21,14 @@
 3. `.coveragerc` is not strictly required for coverage reports, but without the line exclusions you will get false positives on rows
 4. I believe `pytest.ini` and `.coveragerc` can be reconciled into a single `pyproject.toml`, but leaving separate here on purpose
 
-### Usage
+## Usage
+### Databricks
 1. Clone to Databricks workspace
 2. Run `Test Runner` notebook
+
+### Local
+1. Clone repo
+2. `pip install -e .`
+3. Create profile entry in `~/.databrickscfg`, set `serverless_compute_id = auto` for serverless
+4. Log into databricks connect `databricks auth login -p {profile_name}`
+5. `python -m pytest .`
