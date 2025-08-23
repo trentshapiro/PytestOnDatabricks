@@ -1,0 +1,27 @@
+[project]
+name = "pytest-on-databricks"
+version = "0.0.1"
+requires-python = ">=3.10"
+dependencies = [
+    "databricks-connect==16.1.6",
+    "databricks-sdk==0.64.0",
+    "pytest==8.4.1",
+    "pytest-cov==6.2.1",
+]
+
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+markers = [
+  "sample",
+  "shared",
+  "unit",
+  "integration",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "^import",
+    "^from",
+    "^@",
+]
