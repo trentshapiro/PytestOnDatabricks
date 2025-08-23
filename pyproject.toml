@@ -25,3 +25,8 @@ exclude_lines = [
     "^from",
     "^@",
 ]
+omit = [
+    "*/__init__.py",
+    "tests/*",
+]
+skip_empty = true
