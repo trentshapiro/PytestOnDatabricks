@@ -45,7 +45,7 @@ retcode = pytest.main(
         "-p",
         "no:cacheprovider",
         "--disable-warnings",
-        "--cov=tests/",
+        "--cov=src/",
         "--cov-report=term-missing"
     ]
 )
