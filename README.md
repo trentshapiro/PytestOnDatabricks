@@ -15,16 +15,17 @@
     - Environments 3 & 4 both break `tests/` imports, I have not been successful in any way to make these envs work
 
 ### Optional Setup
-1. `conftest.py` is not strictly required, fixtures defined in `tests/conftest.py` can be moved directly into `test_xx.py` files
-2. `pytest.ini` is not strictly required, but is convenient to avoid warnings related to custom markers
-    - must run `chmod +w pytest.ini` one time after file creation
-3. `.coveragerc` is not strictly required for coverage reports, but without the line exclusions you will get false positives on rows
-4. I believe `pytest.ini` and `.coveragerc` can be reconciled into a single `pyproject.toml`, but leaving separate here on purpose
+1. `pyproject.toml` is not strictly required
+    - you can put requirements in `requirements.txt`, which is not required
+    - you can put pytest markers in `pytest.ini`, which is not required, but convenient to suppress warnings related to missing markers
+    - you can put coverage line exclusions in `.coveragerc`, which is not required, but convenient to exclude lines in the coverage report
+2. `conftest.py` is not strictly required, fixtures defined in `tests/conftest.py` can be moved directly into `test_xx.py` files
 
 ## Usage
 ### Databricks
 1. Clone to Databricks workspace
-2. Run `Test Runner` notebook
+2. Connect to Serverless compute
+3. Run `Test Runner` notebook
 
 ### Local
 1. Clone repo
