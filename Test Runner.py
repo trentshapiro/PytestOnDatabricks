@@ -13,10 +13,6 @@ dbutils.library.restartPython()
 
 # COMMAND ----------
 
-# MAGIC %sh chmod +w pytest.ini
-
-# COMMAND ----------
-
 import sys
 import pytest
 import os

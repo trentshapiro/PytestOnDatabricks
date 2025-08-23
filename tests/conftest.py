@@ -5,7 +5,7 @@ from databricks.connect import DatabricksSession
 @pytest.fixture(scope="session")
 def spark() -> SparkSession:
     try:
-        spark = DatabricksSession.builder.profile("DEFAULT").getOrCreate()
+        spark = DatabricksSession.builder.getOrCreate()
     except:
         spark = SparkSession.builder.getOrCreate()
     yield spark
