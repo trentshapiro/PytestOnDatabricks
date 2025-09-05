@@ -1,9 +1,10 @@
 import pytest
 from pyspark.sql import SparkSession, DataFrame
 from databricks.connect import DatabricksSession
+from typing import Generator
 
 @pytest.fixture(scope="session")
-def spark() -> SparkSession:
+def spark() -> Generator[SparkSession]:
     try:
         spark = DatabricksSession.builder.serverless().getOrCreate()
     except:
